@@ -59,7 +59,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
   <title>Anmeldung</title>
 </head>
