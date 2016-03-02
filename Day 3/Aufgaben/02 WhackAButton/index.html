@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Whack a button</title>
+</head>
+<body>
+  <button id="button">Whack me!</button>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var $button = $('#button');
+      var points = 0;
+      var delay = 1000;
+      var hasEntered = false;
+
+      $button.on('mouseenter', function() {
+        if(!hasEntered){
+        hasEntered = true;
+        var that = $(this);
+        setTimeout(function(){
+          var left = Math.floor(Math.random() * (91 - 10) + 10);
+          var top = Math.floor(Math.random() * (91 - 10) + 10);
+
+          that.css("left", left.toString() + "%");
+          that.css("top", top.toString() + "%");
+          hasEntered = false;
+        }, delay);
+      }
+      });
+
+      $button.on('click', function() {
+        points++;
+        delay = delay - 25;
+        console.log(points);
+        console.log(delay);
+      });
+    });
+</script>
+</body>
+</html>

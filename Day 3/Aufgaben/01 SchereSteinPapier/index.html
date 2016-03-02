@@ -10,7 +10,7 @@
       if(spielzugSpielerToCompare === spielzugComputerToCompare){
         return "Unentschieden";
       }
-      
+
       if(spielzugSpielerToCompare === "SCHERE"){
         if(spielzugComputerToCompare === "STEIN"){
           return "Computer gewinnt";
@@ -49,7 +49,7 @@
 
     if(erlaubtToCompare.indexOf(spielzugSpielerToCompare) === -1){
       alert('Der eingegebene Speilzug ist nicht erlaubtToDisplay!');
-      throw new Error('UnerlaubtToDisplayer Spielzug.');
+      throw new Error('Unerlaubter Spielzug.');
     } else {
       alert('Du hast ' + spielzugSpielerToDisplay + ' eingegeben.');
 
