@@ -1,0 +1,23 @@
+GIVEN	Kein Kontaktfeld ausgefüllt
+WHEN	Formular wird abgesendet
+THEN	Neben allen Feldern wird eine Fehlermeldung angezeigt
+
+GIVEN	Alle Felder ausgefüllt
+WHEN	Formular wird abgesendet
+THEN	Keine Fehlermeldung
+
+GIVEN	Bemerkungfeld ausgefüllt
+WHEN	Formular wird abgesendet
+THEN	Keine Fehlermeldung
+
+GIVEN	Firma ist mit güligem Wert gefüllt
+AND	Telefon ist mit gültigem Wert gefüllt
+AND	EMail ist mit ungültigem Wert gefüllt
+WHEN	Formular wird abgesendet
+THEN	Fehler: "Die Email-Adresse "ungültiger wert" ist ungültig."
+
+GIVEN	Firma ist mit güligem Wert gefüllt
+AND	Email ist mit gültigem Wert gefüllt
+AND	Telefon ist mit ungültigem Wert gefüllt
+WHEN	Formular wird abgesendet
+THEN	Fehler: "Die Telefonnummer "ungültiger wert" ist ungültig."
