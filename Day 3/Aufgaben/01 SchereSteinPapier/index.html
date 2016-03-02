@@ -6,67 +6,61 @@
 </head>
 <body>
   <script>
-    function spiele(spielzugSpielerUpperCase, spielzugComputerUpperCase){
-      if(spielzugSpielerUpperCase == "SCHERE"){
-        if(spielzugComputerUpperCase == "SCHERE"){
-          return "Unentschieden";
-        }
-        if(spielzugComputerUpperCase == "STEIN"){
+    function spiele(spielzugSpielerToCompare, spielzugComputerToCompare){
+      if(spielzugSpielerToCompare === spielzugComputerToCompare){
+        return "Unentschieden";
+      }
+      
+      if(spielzugSpielerToCompare === "SCHERE"){
+        if(spielzugComputerToCompare === "STEIN"){
           return "Computer gewinnt";
         }
-        if(spielzugComputerUpperCase == "PAPIER"){
+        if(spielzugComputerToCompare === "PAPIER"){
           return "Spieler gewinnt";
         }
       }
 
-      if(spielzugSpielerUpperCase == "STEIN"){
-        if(spielzugComputerUpperCase == "SCHERE"){
+      if(spielzugSpielerToCompare === "STEIN"){
+        if(spielzugComputerToCompare === "SCHERE"){
           return "Spieler gewinnt";
         }
-        if(spielzugComputerUpperCase == "STEIN"){
-          return "Unentschieden";
-        }
-        if(spielzugComputerUpperCase == "PAPIER"){
+        if(spielzugComputerToCompare === "PAPIER"){
           return "Computer gewinnt";
         }
       }
 
-      if(spielzugSpielerUpperCase == "PAPIER"){
-        if(spielzugComputerUpperCase == "SCHERE"){
+      if(spielzugSpielerToCompare === "PAPIER"){
+        if(spielzugComputerToCompare === "SCHERE"){
           return "Computer gewinnt";
         }
-        if(spielzugComputerUpperCase == "STEIN"){
+        if(spielzugComputerToCompare === "STEIN"){
           return "Spieler gewinnt";
-        }
-        if(spielzugComputerUpperCase == "PAPIER"){
-          return "Unentschieden";
         }
       }
 
       return "Fehler";
     }
 
-    var erlaubt = ["Schere", "Stein", "Papier"];
-    var erlaubtUpperCase = ["SCHERE", "STEIN", "PAPIER"];
+    var erlaubtToDisplay = ["Schere", "Stein", "Papier"];
+    var erlaubtToCompare = ["SCHERE", "STEIN", "PAPIER"];
 
-    var spielzugSpieler = window.prompt("Dein Spielzug:");
-    var spielzugSpielerUpperCase = spielzugSpieler.toUpperCase();
+    var spielzugSpielerToDisplay = window.prompt("Dein Spielzug:");
+    var spielzugSpielerToCompare = spielzugSpielerToDisplay.toUpperCase();
 
-    if(erlaubtUpperCase.indexOf(spielzugSpielerUpperCase) == -1){
-      alert('Der eingegebene Speilzug ist nicht erlaubt!');
-      throw new Error('Unerlaubter Spielzug.');
+    if(erlaubtToCompare.indexOf(spielzugSpielerToCompare) === -1){
+      alert('Der eingegebene Speilzug ist nicht erlaubtToDisplay!');
+      throw new Error('UnerlaubtToDisplayer Spielzug.');
     } else {
-      alert('Du hast ' + spielzugSpieler + ' eingegeben.');
+      alert('Du hast ' + spielzugSpielerToDisplay + ' eingegeben.');
 
-      var spielzugComputer = erlaubt[Math.floor(Math.random()*erlaubt.length)];
-      var spielzugComputerUpperCase = spielzugComputer.toUpperCase();
+      var spielzugComputer = erlaubtToDisplay[Math.floor(Math.random()*erlaubtToDisplay.length)];
+      var spielzugComputerToCompare = spielzugComputer.toUpperCase();
 
       alert('Der Computer spielt ' + spielzugComputer + '.');
 
-      var resultat = spiele(spielzugSpielerUpperCase, spielzugComputerUpperCase);
+      var resultat = spiele(spielzugSpielerToCompare, spielzugComputerToCompare);
       alert('Das Endergebnis lautet: ' + resultat);
     }
-
   </script>
 </body>
 </html>
