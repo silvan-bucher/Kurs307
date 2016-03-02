@@ -20,17 +20,17 @@
 
   <div class="form-element">
     <label for="firma">Firma</label>
-    <input type="text" id="firma" name="firma" value=<?= htmlspecialchars($_POST['firma'] ?? '')?>>
+    <input type="text" id="firma" name="firma" value=<?= htmlspecialchars($_POST['firma'] ?? ' ')?>>
   </div>
 
   <div class="form-element">
     <label for="email">E-Mail Addresse</label>
-      <input type="email" id="email" name="email" value=<?= htmlspecialchars($_POST['email'] ?? '')?>>
+      <input type="email" id="email" name="email" value=<?= htmlspecialchars($_POST['email'] ?? ' ')?>>
   </div>
 
   <div class="form-element">
     <label for="telefon">Telefon</label>
-    <input type="text" id="telefon" name="telefon" value= <?= htmlspecialchars($_POST['telefon'] ?? '')?>>
+    <input type="text" id="telefon" name="telefon" value= <?= htmlspecialchars($_POST['telefon'] ?? ' ')?>>
   </div>
 
 </fieldset>
