@@ -35,8 +35,9 @@
       $button.on('click', function() {
         points++;
         delay = delay - 25;
-        console.log(points);
-        console.log(delay);
+        console.clear();
+        console.log("Points: " + points);
+        console.log("Delay: " + delay + "ms");
       });
     });
 </script>

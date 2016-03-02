@@ -1,0 +1,51 @@
+/*
+https://color.adobe.com/de/create/color-wheel/?base=2&rule=Monochromatic&selected=2&name=Mein%20Color-Thema&mode=rgb&rgbvalues=0.06525841945255313,0.15916435405337487,0.2800000000000001,0.469097889708024,0.6487843137254367,0.88,0.18179131133211224,0.4433864148629727,0.78,0.14925841945255314,0.20643137254900265,0.2800000000000001,0.13517815458028853,0.32969759053913344,0.5799999999999998&swatchOrder=0,1,2,3,4
+*/
+body{
+    background-color: #78A5E0;
+}
+.wrapper{
+  max-width: 800px;
+  margin: 2em auto;
+  font-family: 'Kanit';
+}
+.form-thema{
+  background-color: #2E71C7;
+}
+label {
+  display: block;
+}
+.inline-label{
+  display: inline;
+}
+.form-element{
+  padding-bottom: 10px;
+}
+h1{
+  text-align: center;
+}
+#explain-text{
+  text-align: center;
+}
+.error-wrapper{
+  border: 3px solid red;
+  border-radius: 20px;
+}
+.error-list-item{
+  color:red;
+}
+#error-list{
+  display: none;
+}
+.error-msg{
+  color: black;
+  background-color: red;
+  border-radius: 5px;
+  margin-left: 1em;
+}
+.has-error{
+  color:red;
+}
+.error-textfield{
+  border-color: red;
+}
