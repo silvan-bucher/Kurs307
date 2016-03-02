@@ -10,6 +10,9 @@
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script>
     $(function() {
+      function getRandomPercentValue(){
+        return Math.floor(Math.random() * (91 - 10) + 10).toString() + "%";
+      }
       var $button = $('#button');
       var points = 0;
       var delay = 1000;
@@ -17,17 +20,16 @@
 
       $button.on('mouseenter', function() {
         if(!hasEntered){
-        hasEntered = true;
-        var that = $(this);
-        setTimeout(function(){
-          var left = Math.floor(Math.random() * (91 - 10) + 10);
-          var top = Math.floor(Math.random() * (91 - 10) + 10);
-
-          that.css("left", left.toString() + "%");
-          that.css("top", top.toString() + "%");
-          hasEntered = false;
-        }, delay);
-      }
+          hasEntered = true;
+          var that = $(this);
+          setTimeout(function(){
+            that.css({
+              left: getRandomPercentValue(),
+              top: getRandomPercentValue()
+            });
+            hasEntered = false;
+          }, delay);
+        }
       });
 
       $button.on('click', function() {
