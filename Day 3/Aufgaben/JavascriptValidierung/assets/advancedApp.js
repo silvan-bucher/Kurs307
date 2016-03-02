@@ -4,7 +4,7 @@ $(function() {
 
     var fields = [{id: "firma", message: "Bitte geben Sie einen Firmennamen ein."},
                   {id: "email", message: "Bitte geben Sie eine Email-Addresse ein."},
-                  {id: "telefon", message: "Bitte geben Sie eine Email-Addresse ein."}
+                  {id: "telefon", message: "Bitte geben Sie eine Telefonnummer ein."}
                 ];
 
     $(".has-error").removeClass("has-error");
