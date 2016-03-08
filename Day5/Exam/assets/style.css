@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font: 16px/1.6 Arial, sans-serif;
+    max-width: 800px;
+    margin: 2em auto;
+}
+#error-list{
+  display: none;
+}
+.error-wrapper{
+  border: 3px solid red;
+  border-radius: 20px;
+}
+.error-list-item{
+  color:red;
+}

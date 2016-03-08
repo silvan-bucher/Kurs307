@@ -13,7 +13,7 @@
               echo '<span class="error-msg">Ungültiger Code</span>';
             }
             ?>
-            <input class="form-control" type="text" id="code" name="code" value="<?= htmlspecialchars($code ?? $_POST["code"] ?? "") ?>">
+            <input class="form-control" type="text" id="code" name="code" value="<?= htmlspecialchars($_GET["code"] ?? $_POST["code"] ?? "") ?>">
         </div>
     </fieldset>
 

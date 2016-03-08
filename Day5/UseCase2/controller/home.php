@@ -81,6 +81,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $view = "success";
       }
 }
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $code = $_GET["code"] ?? "";
-}
