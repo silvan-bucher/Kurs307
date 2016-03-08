@@ -20,7 +20,7 @@ function setPrice(){
 $(function() {
     console.log('app.js geladen!');
     setPrice();
-    $('.js-quantity').change(function(){
+    $('.js-quantity').keyup(function(){
       setPrice();
     });
     /*Validierung*/
