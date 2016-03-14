@@ -1,5 +1,4 @@
-# Kurs307
-# Interaktive Webseite mit Formular erstellen
+# Interaktive Webseite mit Formular erstellen - Modul307
 
 ## Programm
 
